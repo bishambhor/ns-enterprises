@@ -2,7 +2,7 @@
 
 The official showcase website for **NS Enterprises**, a skincare shop. The site presents the products available in-store so customers can browse the range and check availability over WhatsApp.
 
-**Live site:** https://muse.ai/s/ns-enterprises-qxf64xvxh7jp3q/YdyqgBOIYl7eBqctJO8RlBijnP8zTlWj-qblku9EmyE
+**Live site:** https://bishambhor.github.io/ns-enterprises/
 
 ## About
 
@@ -38,20 +38,40 @@ The site serves two dedicated layouts, each designed for its own screen:
 - **Desktop (769px and up)** — a wide editorial catalogue with top navigation, a sticky search and filter bar, and three-column product cards.
 - **Mobile (768px and below)** — a phone-native layout with a compact hero, tap-to-filter skin-concern cards, two-column product cards, and a frosted bottom tab bar (Shop / Routine / Ritual / Guide / WhatsApp).
 
-## Tech
+## Project structure
 
-The site is a single self-contained HTML file (`index.html`) — all product photos and assets are embedded, so it runs anywhere a browser can open a file, with no build step and no server required.
+```text
+ns-enterprises/
+├── index.html          # Page structure (desktop + mobile layouts)
+├── css/
+│   └── style.css       # All styling
+├── js/
+│   └── script.js       # Search, filters, Routine Builder, WhatsApp links
+├── images/             # Real product photos (JPG/WebP, one file per product)
+└── README.md           # This file
+```
 
-## Repository
+## Run locally
 
-| File | Description |
-| --- | --- |
-| `index.html` | The complete website (desktop + mobile versions). |
-| `README.md` | This file. |
+No build step and no server required — open `index.html` in any browser. To test exactly as it runs online, serve the folder with any static server, for example:
+
+```bash
+python3 -m http.server 8000
+```
+
+then open http://localhost:8000.
+
+## Deployment
+
+The site is hosted free with **GitHub Pages**, directly from this repository (`main` branch, root folder). Any commit to `main` updates the live site automatically.
 
 ## Updating the site
 
-To update the catalogue or the site, edit `index.html` and commit the change. New products should be added with their real product photo, the correct brand and category tags, and a WhatsApp availability button, following the existing product cards.
+To add a product:
+
+1. Add its real photo to `images/` (named after the product).
+2. Add a product card to `index.html`, following the existing cards, with the correct brand, category, and skin-concern tags.
+3. Commit and push — the live site updates on its own.
 
 ---
 
