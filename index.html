@@ -424,6 +424,140 @@
 
   /* Content is always visible — no hide-until-scroll states. */
   .reveal{opacity:1;transform:none}
+
+  /* ============================================================
+     TWO VERSIONS — PC and Mobile are designed separately.
+     PC (>=769px): wide editorial catalogue, top nav, 3-across grid.
+     Mobile (<=768px): app-style, bottom tab bar, 2-up compact cards,
+     big tap cards. Neither is the other one squeezed.
+     ============================================================ */
+  .mobile-quick{display:none}
+  .mobile-tabbar{display:none}
+
+  /* ---------- PC VERSION ---------- */
+  @media (min-width:769px){
+    .mobile-quick,.mobile-tabbar{display:none !important}
+    .wrap{max-width:1240px;padding:0 32px}
+    .hero{padding:64px 0 0}
+    .m-grid{grid-template-columns:repeat(3,1fr);gap:26px}
+    .m-card{padding:24px}
+    .m-card h3{font-size:21px}
+    .shop-tools{position:sticky;top:76px;z-index:20;box-shadow:0 10px 30px rgba(51,64,44,.08)}
+    footer{padding-bottom:34px}
+  }
+  @media (min-width:769px) and (max-width:1020px){
+    .m-grid{grid-template-columns:repeat(2,1fr)}
+  }
+
+  /* ---------- MOBILE VERSION ---------- */
+  @media (max-width:768px){
+    body{font-size:16px;padding-bottom:78px}
+    .wrap{padding:0 16px}
+    header{position:sticky;top:0}
+    .nav{padding-top:10px;padding-bottom:10px}
+    /* Hero — phone-first, not a shrunk desktop hero */
+    .hero{padding:20px 0 0}
+    .hero-grid{grid-template-columns:1fr;gap:18px}
+    .hero h1{font-size:36px;line-height:1.08;margin:12px 0 12px}
+    .hero p.lede{font-size:16.5px;margin-bottom:18px}
+    .hero-kicker{font-size:11px;letter-spacing:.22em}
+    .hero-actions{gap:10px}
+    .hero-actions .btn{flex:1;text-align:center;padding:13px 10px;font-size:14.5px}
+    .hero-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px;border-top:none}
+    .hero-points div{padding:12px 10px;margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;text-align:center}
+    .hero-points b{font-size:19px}
+    .hero-points span{font-size:11.5px;line-height:1.3;display:block}
+    .hero-fig img{height:248px;border-radius:20px;box-shadow:0 12px 28px rgba(51,64,44,.14)}
+    .hero-badge{position:static;max-width:none;margin-top:10px;padding:12px 14px;border-radius:14px}
+    .strip{margin-top:26px}
+    .strip-inner{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;padding:16px 0}
+    .strip span{font-size:11.5px;letter-spacing:.1em}
+    section{padding:42px 0}
+    .sec-head{margin-bottom:22px}
+    .sec-head h2{font-size:28px}
+    .brand-note{padding:14px;border-radius:14px}
+    .brand-note p{font-size:14px}
+    /* Mobile-only quick concern cards */
+    .mobile-quick{display:block;padding:22px 0 4px;background:var(--bg)}
+    .mobile-quick h2{font-size:23px;margin:0 0 4px}
+    .mobile-quick p{margin:0 0 14px;color:var(--ink-soft);font-size:14.5px}
+    .mq-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .mq-grid button{
+      font-family:"Jost",sans-serif;text-align:left;cursor:pointer;
+      background:var(--surface);border:1px solid var(--line);border-radius:16px;
+      padding:14px 13px;color:var(--ink);min-height:76px;
+    }
+    .mq-grid button:active{border-color:var(--sage);background:var(--sage-tint)}
+    .mq-grid strong{display:block;font-family:"Marcellus",serif;font-weight:400;font-size:16.5px;line-height:1.2;margin-bottom:4px}
+    .mq-grid span{display:block;font-size:12.5px;color:var(--ink-soft);line-height:1.35}
+    .mq-grid button.mq-spf{border-color:var(--sage);background:var(--sage-tint)}
+    /* Shop tools — stacked, thumb-first */
+    .shop-tools{padding:14px 14px 12px;border-radius:16px}
+    .shop-tools-grid{grid-template-columns:1fr;gap:12px}
+    .shop-field.search{grid-column:auto}
+    .search-wrap input{font-size:16px;padding:13px 42px}
+    .shop-field select{font-size:16px;padding:13px 36px 13px 14px}
+    .concern-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .concern-tabs .chip{padding:11px 8px;font-size:13.5px;text-align:center;border-radius:12px}
+    /* Products — compact two-up app cards, never one long squeezed column */
+    .m-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+    .m-card{padding:12px;border-radius:14px;gap:6px}
+    .m-fig{margin:-12px -12px 2px;aspect-ratio:1/1}
+    .m-fig img{padding:6px}
+    .m-top{gap:6px}
+    .m-brand{font-size:9.5px;letter-spacing:.14em}
+    .m-step{font-size:10px;padding:3px 7px}
+    .m-card h3{font-size:15px;line-height:1.25}
+    .m-card p{font-size:13px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .m-pills{gap:4px}
+    .m-pills span{font-size:11px;padding:2px 7px}
+    .m-use{font-size:11.5px;line-height:1.4;padding-top:8px}
+    .wa-card-btn{font-size:12.5px;padding:10px 6px;gap:6px;border-radius:9px;margin-top:9px;text-align:center}
+    .wa-card-btn svg{width:16px;height:16px}
+    .wa-banner{padding:16px}
+    .wa-banner-btn{width:100%;justify-content:center}
+    /* Finder / Ritual / Ingredients — single-column phone flow */
+    .finder-box{padding:18px 16px;border-radius:16px}
+    .opt{padding:10px 13px;font-size:14px;min-height:44px}
+    .result{padding:18px 16px}
+    .ritual-fig img{height:300px;border-radius:16px}
+    .toggle{width:100%}
+    .toggle button{flex:1;padding:11px 10px}
+    .steps li{gap:12px;padding:14px 0}
+    .step-num{font-size:21px;width:32px}
+    .ing-grid{grid-template-columns:1fr;gap:12px}
+    .ing{padding:18px}
+    .promise{padding:30px 20px;border-radius:18px}
+    .faq summary{padding:16px;font-size:15.5px}
+    .faq .a{padding:0 16px 16px;font-size:14.5px}
+    footer{padding:36px 0 18px}
+    .wa-float{bottom:88px;right:14px;width:52px;height:52px;z-index:95}
+    /* Bottom tab bar — mobile version only */
+    .mobile-tabbar{
+      display:flex;position:fixed;left:0;right:0;bottom:0;z-index:100;
+      background:color-mix(in srgb, var(--surface) 88%, transparent);
+      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+      border-top:1px solid var(--line);
+      padding:6px 6px calc(6px + env(safe-area-inset-bottom));
+    }
+    .mobile-tabbar a{
+      flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+      min-height:52px;border-radius:12px;text-decoration:none;color:var(--ink-soft);
+      font-size:10.5px;letter-spacing:.04em;font-weight:500;
+    }
+    .mobile-tabbar a svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .mobile-tabbar a.active{color:var(--sage-deep);background:var(--sage-tint)}
+    @media (prefers-color-scheme: dark){ .mobile-tabbar a.active{color:var(--ink)} }
+    .mobile-tabbar a.tab-wa{color:#0e7568}
+    .mobile-tabbar a.tab-wa svg{fill:currentColor;stroke:none}
+  }
+  @media (max-width:380px){
+    .m-grid{gap:9px}
+    .m-card{padding:10px}
+    .m-fig{margin:-10px -10px 2px}
+    .hero h1{font-size:32px}
+  }
+
 </style>
 </head>
 <body>
@@ -484,6 +618,20 @@
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01"/></svg> Gentle, simple formulas</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> For every skin type</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg> Four-step routines</span>
+    </div>
+  </div>
+
+  <!-- MOBILE VERSION ONLY: quick concern tap-cards (hidden on PC) -->
+  <div class="mobile-quick" aria-label="Quick shop by concern">
+    <div class="wrap">
+      <h2>What does your skin need today?</h2>
+      <p>Tap a concern — the products below filter straight away.</p>
+      <div class="mq-grid">
+        <button type="button" data-mq-concern="acne"><strong>Acne &amp; breakouts</strong><span>Clear pores &amp; calm active spots</span></button>
+        <button type="button" data-mq-concern="oily"><strong>Oily skin</strong><span>Mattify, balance oil &amp; stay light</span></button>
+        <button type="button" data-mq-concern="dry"><strong>Dry skin</strong><span>Hydrate, repair &amp; stop tightness</span></button>
+        <button type="button" class="mq-spf" data-mq-cat="sunscreen"><strong>All sunscreens</strong><span>SPF 30–60 from 3 brands</span></button>
+      </div>
     </div>
   </div>
 
@@ -1164,6 +1312,14 @@
   </div>
 </footer>
 
+<nav class="mobile-tabbar" aria-label="Mobile">
+  <a href="#concern" class="active" data-tab="concern"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Shop</a>
+  <a href="#finder" data-tab="finder"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v5.5L4.8 18a2.4 2.4 0 0 0 2.1 3.5h10.2a2.4 2.4 0 0 0 2.1-3.5L14 8.5V3"/><path d="M7.5 15h9"/></svg>Routine</a>
+  <a href="#ritual" data-tab="ritual"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Ritual</a>
+  <a href="#faq" data-tab="faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.5 9.3A2.6 2.6 0 1 1 12 12.2V14"/><path d="M12 17h.01"/></svg>Guide</a>
+  <a class="tab-wa" href="https://wa.me/918837074944?text=Hi%20NS%20Enterprises%2C%20I%20want%20to%20check%20if%20a%20product%20is%20available%20in%20store." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
+</nav>
+
 <a class="wa-float" href="https://wa.me/918837074944?text=Hi%20NS%20Enterprises%2C%20I%20want%20to%20check%20if%20a%20product%20is%20available%20in%20store." target="_blank" rel="noopener" aria-label="Ask product availability on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 
 <script>
@@ -1432,6 +1588,36 @@
   pmBtn.addEventListener("click", function(){ renderRitual("pm"); });
   renderRitual("am");
 
+})();
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var mq = window.matchMedia("(max-width: 768px)");
+  function flag(){ document.documentElement.setAttribute("data-version", mq.matches ? "mobile" : "pc"); document.body.classList.toggle("is-mobile", mq.matches); document.body.classList.toggle("is-pc", !mq.matches); }
+  flag();
+  if (mq.addEventListener) mq.addEventListener("change", flag); else if (mq.addListener) mq.addListener(flag);
+  // Mobile quick cards drive the real filters
+  document.querySelectorAll("[data-mq-concern]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var chip = document.querySelector('#concern .chip[data-concern="' + btn.getAttribute("data-mq-concern") + '"]');
+      if (chip) chip.click();
+      var target = document.getElementById("concern");
+      if (target) target.scrollIntoView({behavior:"smooth", block:"start"});
+    });
+  });
+  document.querySelectorAll("[data-mq-cat]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var sel = document.getElementById("categoryFilter");
+      if (sel){ sel.value = btn.getAttribute("data-mq-cat"); sel.dispatchEvent(new Event("change", {bubbles:true})); }
+      var target = document.getElementById("concern");
+      if (target) target.scrollIntoView({behavior:"smooth", block:"start"});
+    });
+  });
+  // Bottom tab bar: highlight the tapped tab
+  var tabs = document.querySelectorAll(".mobile-tabbar a[data-tab]");
+  tabs.forEach(function(a){ a.addEventListener("click", function(){ tabs.forEach(function(x){ x.classList.remove("active"); }); a.classList.add("active"); }); });
 })();
 </script>
 </body>
