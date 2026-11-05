@@ -43,12 +43,13 @@ The site serves two dedicated layouts, each designed for its own screen:
 ```text
 ns-enterprises/
 ├── index.html          # Page structure (desktop + mobile layouts)
-├── css/
-│   └── style.css       # All styling
-├── js/
-│   └── script.js       # Search, filters, Routine Builder, WhatsApp links
-├── images/             # Real product photos (JPG/WebP, one file per product)
-└── README.md           # This file
+├── README.md           # This file
+├── assets/             # Code resources
+│   ├── css/
+│   │   └── style.css   # All styling
+│   └── js/
+│       └── script.js   # Search, filters, Routine Builder, WhatsApp links
+└── images/             # Media — real product photos (JPG/WebP, one file per product)
 ```
 
 ## Run locally
