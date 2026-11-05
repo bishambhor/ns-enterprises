@@ -1,137 +1,56 @@
 (function(){
   "use strict";
 
-  /* ---- Search + filters: search, brand, category & concern all work together ---- */
-  /* Shop by category clones the main cards first, keeping photos + WhatsApp buttons. */
+  /* ---- Catalogue: load products.json, render the cards, start filters ---- */
+  var mainGrid = document.getElementById("minimalistGrid");
+  var newGrid = document.querySelector("#newArrivals .new-grid");
   var catGrid = document.getElementById("categoryGrid");
-  var catEmpty = document.getElementById("categoryEmpty");
-  if (catGrid) {
-    document.querySelectorAll("#minimalistGrid .m-card").forEach(function(card){
-      var clone = card.cloneNode(true);
-      clone.classList.remove("hide");
-      catGrid.insertBefore(clone, catEmpty);
-    });
-  }
-  var filterState = { query:"", brand:"all", category:"all", concern:"all" };
-  var searchInput = document.getElementById("productSearch");
-  var searchClear = document.getElementById("searchClear");
-  var brandSelect = document.getElementById("brandFilter");
-  var categorySelect = document.getElementById("categoryFilter");
-  var concernChips = document.querySelectorAll("#concern .chip[data-concern]");
-  var catChips = document.querySelectorAll(".chip[data-cat]");
   var resultCount = document.getElementById("resultCount");
-  var clearBtn = document.getElementById("clearFilters");
-  var clearBtn2 = document.getElementById("clearFilters2");
-  var noResults = document.getElementById("noResults");
-  var concernEmpty = document.getElementById("concernEmpty");
-  var TOTAL_PRODUCTS = document.querySelectorAll("#minimalistGrid .m-card").length;
 
-  function brandKey(card){
-    var el = card.querySelector(".m-brand");
-    var t = el ? el.textContent.toLowerCase() : "";
-    if (t.indexOf("minimalist") !== -1) return "minimalist";
-    if (t.indexOf("derma") !== -1) return "dermaco";
-    if (t.indexOf("cetaphil") !== -1) return "cetaphil";
-    if (t.indexOf("sheth") !== -1) return "drsheth";
-    if (t.indexOf("mamaearth") !== -1) return "mamaearth";
-    if (t.indexOf("dot") !== -1) return "dotkey";
-    if (t.indexOf("plum") !== -1) return "plum";
-    return t.trim();
-  }
-  function cardMatches(card){
-    if (filterState.concern !== "all") {
-      var concerns = (card.getAttribute("data-concerns") || "").split(" ");
-      if (concerns.indexOf(filterState.concern) === -1) return false;
-    }
-    if (filterState.category !== "all") {
-      var cats = (card.getAttribute("data-category") || "").split(" ");
-      if (cats.indexOf(filterState.category) === -1) return false;
-    }
-    if (filterState.brand !== "all" && brandKey(card) !== filterState.brand) return false;
-    if (filterState.query) {
-      var text = card.textContent.toLowerCase();
-      var tokens = filterState.query.split(/\s+/);
-      for (var i = 0; i < tokens.length; i++) {
-        if (tokens[i] && text.indexOf(tokens[i]) === -1) return false;
-      }
-    }
-    return true;
-  }
-  function applyFilters(){
-    var visible = 0;
-    document.querySelectorAll("#minimalistGrid .m-card").forEach(function(card){
-      var show = cardMatches(card);
-      card.classList.toggle("hide", !show);
-      if (show) visible++;
+  /* Shown if products.json fails to load. */
+  function showLoadError(){
+    var msg = "Products could not be loaded. Please check your connection and refresh the page.";
+    [mainGrid, newGrid].forEach(function(grid){
+      if (!grid) return;
+      grid.innerHTML = '<p class="loading-note">' + msg + "</p>";
     });
-    var catVisible = 0;
+    if (resultCount) resultCount.textContent = "Products could not be loaded right now.";
+  }
+
+  function renderCatalogue(products){
+    var available = products.filter(function(p){ return p.available !== false; });
+    if (mainGrid) {
+      /* #concernEmpty and #noResults live INSIDE the grid (they are grid
+       * children by design) — keep them, they follow the cards. */
+      var concernEmpty = document.getElementById("concernEmpty");
+      var noResults = document.getElementById("noResults");
+      mainGrid.innerHTML = "";
+      available.forEach(function(p){ mainGrid.appendChild(NSProducts.buildCard(p)); });
+      if (concernEmpty) mainGrid.appendChild(concernEmpty);
+      if (noResults) mainGrid.appendChild(noResults);
+    }
     if (catGrid) {
-      catGrid.querySelectorAll(".m-card").forEach(function(card){
-        var show = cardMatches(card);
-        card.classList.toggle("hide", !show);
-        if (show) catVisible++;
+      /* Same cards as the main grid, in the same order — the old code
+       * cloned the main cards; now both grids render from the data. */
+      var catEmpty = document.getElementById("categoryEmpty");
+      catGrid.innerHTML = "";
+      available.forEach(function(p){ catGrid.appendChild(NSProducts.buildCard(p)); });
+      if (catEmpty) catGrid.appendChild(catEmpty);
+    }
+    if (newGrid) {
+      newGrid.innerHTML = "";
+      available.filter(function(p){ return p.isNew; }).forEach(function(p){
+        newGrid.appendChild(NSProducts.buildCard(p));
       });
     }
-    if (concernEmpty) concernEmpty.style.display = "none";
-    if (noResults) noResults.classList.toggle("show", visible === 0);
-    if (catEmpty) {
-      catEmpty.style.display = catVisible ? "none" : "block";
-      if (!catVisible) catEmpty.textContent = "No products match your current search and filters.";
-    }
-    if (resultCount) resultCount.innerHTML = "Showing <b>" + visible + "</b> of " + TOTAL_PRODUCTS + " products";
-    var anyActive = !!filterState.query || filterState.brand !== "all" || filterState.category !== "all" || filterState.concern !== "all";
-    if (clearBtn) clearBtn.classList.toggle("show", anyActive);
-    if (searchClear) searchClear.classList.toggle("show", !!filterState.query);
+    NSFilters.init(available);
   }
-  function syncCategoryUI(){
-    if (categorySelect) categorySelect.value = filterState.category;
-    catChips.forEach(function(c){ c.classList.toggle("active", c.getAttribute("data-cat") === filterState.category); });
+
+  if (window.NSProducts && window.NSFilters) {
+    NSProducts.ready.then(renderCatalogue).catch(showLoadError);
+  } else {
+    showLoadError();
   }
-  function clearAllFilters(){
-    filterState = { query:"", brand:"all", category:"all", concern:"all" };
-    if (searchInput) searchInput.value = "";
-    if (brandSelect) brandSelect.value = "all";
-    concernChips.forEach(function(c){ c.classList.toggle("active", c.getAttribute("data-concern") === "all"); });
-    syncCategoryUI();
-    applyFilters();
-  }
-  if (searchInput) searchInput.addEventListener("input", function(){
-    filterState.query = searchInput.value.trim().toLowerCase();
-    applyFilters();
-  });
-  if (searchClear) searchClear.addEventListener("click", function(){
-    filterState.query = "";
-    searchInput.value = "";
-    applyFilters();
-    searchInput.focus();
-  });
-  if (brandSelect) brandSelect.addEventListener("change", function(){
-    filterState.brand = brandSelect.value;
-    applyFilters();
-  });
-  if (categorySelect) categorySelect.addEventListener("change", function(){
-    filterState.category = categorySelect.value;
-    syncCategoryUI();
-    applyFilters();
-  });
-  concernChips.forEach(function(chip){
-    chip.addEventListener("click", function(){
-      concernChips.forEach(function(c){ c.classList.remove("active"); });
-      chip.classList.add("active");
-      filterState.concern = chip.getAttribute("data-concern");
-      applyFilters();
-    });
-  });
-  catChips.forEach(function(chip){
-    chip.addEventListener("click", function(){
-      filterState.category = chip.getAttribute("data-cat");
-      syncCategoryUI();
-      applyFilters();
-    });
-  });
-  if (clearBtn) clearBtn.addEventListener("click", clearAllFilters);
-  if (clearBtn2) clearBtn2.addEventListener("click", clearAllFilters);
-  applyFilters();
 
   /* ---- Routine Builder ---- */
   var chosen = { skin:null, concern:null, react:null, level:null };
@@ -203,6 +122,12 @@
     steps.forEach(function(s){ h += "<li><div><b>" + s[0] + "</b><span>" + s[1] + "</span></div></li>"; });
     return h + "</ol>";
   }
+  function stepAvailable(step){
+    var name = step[0];
+    if (!window.NSProducts || !NSProducts.looksLikeProduct(name)) return true;
+    var p = NSProducts.findByDisplayName(name);
+    return !!(p && p.available);
+  }
   function renderResult(){
     var box = document.getElementById("finderResult");
     document.querySelectorAll("#builderSteps span").forEach(function(s){
@@ -219,11 +144,13 @@
       return;
     }
     var r = buildRoutine();
+    var am = r.am.filter(stepAvailable);
+    var pm = r.pm.filter(stepAvailable);
     var intro = "For <b>" + skinLabels[chosen.skin] + "</b> focused on <b>" + concernLabels[chosen.concern] + "</b>" + (chosen.react==="reactive" ? " - built extra-gently because your skin is reactive." : chosen.react==="sometimes" ? " - with actives introduced steadily." : ".");
     var caution = r.pmNote || (chosen.concern==="acne" ? "Give it 6-8 weeks of consistency. Do not add another strong active in the first two weeks." : "Give it 4-6 weeks of consistency before judging results. One new product at a time.");
     if(chosen.level==="simple") caution += " You chose the simple version - once it feels easy for 2 weeks, add the treatment step from the complete routine.";
     box.innerHTML = "<h3>Your personal routine</h3><p class='r-sub'>" + intro + "</p>"
-      + '<div class="am-pm"><div><h4>Morning</h4>' + listHtml(r.am) + '</div><div><h4>Evening</h4>' + listHtml(r.pm) + "</div></div>"
+      + '<div class="am-pm"><div><h4>Morning</h4>' + listHtml(am) + '</div><div><h4>Evening</h4>' + listHtml(pm) + "</div></div>"
       + '<div class="builder-note"><b>How to start:</b> ' + caution + ' Patch-test new actives first. All products listed are available in store at NS Enterprises - bring this list in and we will help you find them on the shelf.</div>'
       + '<div class="builder-actions"><button class="mini-btn" id="restartBuilder" type="button">Start again</button><a class="mini-btn ghost" href="#concern" style="text-decoration:none;display:inline-block">See these products</a><a class="mini-btn" href="https://wa.me/918837074944?text=Hi%20NS%20Enterprises%2C%20I%20just%20built%20my%20routine%20on%20your%20site.%20Are%20the%20products%20in%20my%20routine%20available%20in%20store%3F" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;background:#128c7e;border-color:#128c7e">Ask availability on WhatsApp</a></div>';
     var rb = document.getElementById("restartBuilder");

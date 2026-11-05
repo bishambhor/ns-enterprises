@@ -1,0 +1,1746 @@
+{
+  "version": 1,
+  "products": [
+    {
+      "id": "minimalist-salicylic-acid-lha-2-cleanser",
+      "name": "Salicylic Acid + LHA 2% Cleanser",
+      "brand": "Minimalist",
+      "category": "cleanser",
+      "categories": [
+        "cleanser"
+      ],
+      "description": "A daily exfoliating cleanser that works inside pores to clear excess oil, blackheads and build-up — without leaving skin tight.",
+      "image": "images/minimalist-salicylic-acid-lha-2-cleanser-white-bottle-with-b.webp",
+      "imageAlt": "Minimalist Salicylic Acid + LHA 2% Cleanser — white bottle with black cap",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Cleanse",
+      "tags": [
+        "Acne",
+        "Oily skin",
+        "Blackheads"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Salicylic Acid + LHA 2%"
+        }
+      ],
+      "keyActives": [
+        "Salicylic Acid",
+        "LHA 2%"
+      ],
+      "waName": "Minimalist Salicylic Acid + LHA 2% Cleanser",
+      "ariaName": "Minimalist Salicylic Acid + LHA 2% Cleanser",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-salicylic-acid-2-face-serum",
+      "name": "Salicylic Acid 2% Face Serum",
+      "brand": "Minimalist",
+      "category": "serum",
+      "categories": [
+        "serum"
+      ],
+      "description": "A BHA treatment for active breakouts, clogged pores and bumpy texture. It dissolves the oil and dead skin that block pores.",
+      "image": "images/minimalist-salicylic-acid-2-face-serum-dark-glass-dropper-bo.webp",
+      "imageAlt": "Minimalist Salicylic Acid 2% Face Serum — dark glass dropper bottle with its box",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Treat · PM",
+      "tags": [
+        "Acne",
+        "Oily skin",
+        "Clogged pores"
+      ],
+      "use": "PM, 2–3 nights a week to start",
+      "useExtras": [
+        {
+          "label": "Key active",
+          "value": "Salicylic Acid 2%"
+        }
+      ],
+      "keyActives": [
+        "Salicylic Acid 2%"
+      ],
+      "waName": "Minimalist Salicylic Acid 2% Face Serum",
+      "ariaName": "Minimalist Salicylic Acid 2% Face Serum",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-niacinamide-10-face-serum",
+      "name": "Niacinamide 10% Face Serum",
+      "brand": "Minimalist",
+      "category": "serum",
+      "categories": [
+        "serum"
+      ],
+      "description": "The all-rounder for oily, acne-prone skin — helps balance sebum, calm the look of blemishes and fade post-acne marks over time.",
+      "image": "images/minimalist-niacinamide-10-face-serum-dark-glass-dropper-bott.jpg",
+      "imageAlt": "Minimalist Niacinamide 10% Face Serum — dark glass dropper bottle with its box",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Treat",
+      "tags": [
+        "Acne marks",
+        "Oily skin",
+        "Uneven tone"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Niacinamide 10% + Zinc"
+        }
+      ],
+      "keyActives": [
+        "Niacinamide 10%",
+        "Zinc"
+      ],
+      "waName": "Minimalist Niacinamide 10% Face Serum",
+      "ariaName": "Minimalist Niacinamide 10% Face Serum",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-vitamin-b5-10-moisturizer",
+      "name": "Vitamin B5 10% Moisturizer",
+      "brand": "Minimalist",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer"
+      ],
+      "description": "A lightweight, oil-free moisturizer made for oily and combination skin — deep hydration with a non-greasy, matte-comfort finish.",
+      "image": "images/minimalist-vitamin-b5-10-moisturizer-white-tube-with-black-c.webp",
+      "imageAlt": "Minimalist Vitamin B5 10% Moisturizer — white tube with black cap",
+      "available": true,
+      "skinConcerns": [
+        "oily",
+        "acne"
+      ],
+      "step": "Moisturise",
+      "tags": [
+        "Oily skin",
+        "Combination",
+        "Oil-free"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key active",
+          "value": "Vitamin B5 (Panthenol) 10%"
+        }
+      ],
+      "keyActives": [
+        "Vitamin B5 (Panthenol) 10%"
+      ],
+      "waName": "Minimalist Vitamin B5 10% Moisturizer",
+      "ariaName": "Minimalist Vitamin B5 10% Moisturizer",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-sepicalm-3-oat-moisturizer",
+      "name": "Sepicalm 3% + Oat Moisturizer",
+      "brand": "Minimalist",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer"
+      ],
+      "description": "A calming moisturizer for skin that flushes, stings or breaks out easily. Soothes redness while keeping hydration light, not heavy.",
+      "image": "images/minimalist-sepicalm-3-oat-moisturizer-white-tube-beside-its.jpg",
+      "imageAlt": "Minimalist Sepicalm 3% + Oat Moisturizer — white tube beside its box",
+      "available": true,
+      "skinConcerns": [
+        "oily",
+        "acne",
+        "dry"
+      ],
+      "step": "Moisturise · Soothe",
+      "tags": [
+        "Sensitive",
+        "Redness",
+        "Acne-prone"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Sepicalm 3% + Oat"
+        }
+      ],
+      "keyActives": [
+        "Sepicalm 3%",
+        "Oat"
+      ],
+      "waName": "Minimalist Sepicalm 3% + Oat Moisturizer",
+      "ariaName": "Minimalist Sepicalm 3% + Oat Moisturizer",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-light-fluid-spf-50-sunscreen",
+      "name": "Light Fluid SPF 50 Sunscreen",
+      "brand": "Minimalist",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Your non-negotiable last morning step — especially on Salicylic Acid or Vitamin C. Light fluid texture that oily skin can actually wear daily.",
+      "image": "images/minimalist-light-fluid-spf-50-sunscreen-white-tube-beside-it.webp",
+      "imageAlt": "Minimalist Light Fluid SPF 50 Sunscreen — white tube beside its box",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "acne",
+        "oily"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "All skin types",
+        "Daily SPF",
+        "No heavy feel"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Reapply",
+          "value": "every 2–3 hours outdoors"
+        }
+      ],
+      "keyActives": [],
+      "waName": "Minimalist Light Fluid SPF 50 Sunscreen",
+      "ariaName": "Minimalist Light Fluid SPF 50 Sunscreen",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-hyaluronic-pga-2-face-serum",
+      "name": "Hyaluronic + PGA 2% Face Serum",
+      "brand": "Minimalist",
+      "category": "serum",
+      "categories": [
+        "serum"
+      ],
+      "description": "A water-binding serum for thirsty skin. Layer it on damp skin to pull in hydration and soften the look of fine, dry lines.",
+      "image": "images/minimalist-hyaluronic-pga-2-face-serum-dark-glass-dropper-bo.jpg",
+      "imageAlt": "Minimalist Hyaluronic + PGA 2% Face Serum — dark glass dropper bottle with its box",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Treat · Hydrate",
+      "tags": [
+        "Dry skin",
+        "Dehydration",
+        "Tightness"
+      ],
+      "use": "AM & PM on damp skin",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Hyaluronic Acid + PGA 2%"
+        }
+      ],
+      "keyActives": [
+        "Hyaluronic Acid",
+        "PGA 2%"
+      ],
+      "waName": "Minimalist Hyaluronic + PGA 2% Face Serum",
+      "ariaName": "Minimalist Hyaluronic + PGA 2% Face Serum",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-ceramides-0-3-madecassoside-moisturizer",
+      "name": "Ceramides 0.3% + Madecassoside Moisturizer",
+      "brand": "Minimalist",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer"
+      ],
+      "description": "A barrier-repair cream for dry, flaky or over-exfoliated skin. Replenishes ceramides so skin holds moisture instead of losing it.",
+      "image": "images/minimalist-ceramides-0-3-madecassoside-moisturizer-white-tub.webp",
+      "imageAlt": "Minimalist Ceramides 0.3% + Madecassoside Moisturizer — white tube beside its box",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Moisturise · Repair",
+      "tags": [
+        "Dry skin",
+        "Barrier repair",
+        "Flakiness"
+      ],
+      "use": "AM & PM, generously at night",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Ceramides 0.3% + Madecassoside"
+        }
+      ],
+      "keyActives": [
+        "Ceramides 0.3%",
+        "Madecassoside"
+      ],
+      "waName": "Minimalist Ceramides 0.3% + Madecassoside Moisturizer",
+      "ariaName": "Minimalist Ceramides 0.3% + Madecassoside Moisturizer",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-vitamin-c-10-face-serum",
+      "name": "Vitamin C 10% Face Serum",
+      "brand": "Minimalist",
+      "category": "serum",
+      "categories": [
+        "serum"
+      ],
+      "description": "For dry skin that also looks dull. A gentle daily Vitamin C to bring back glow and evenness, always sealed with moisturizer and SPF.",
+      "image": "images/minimalist-vitamin-c-10-face-serum-dark-glass-dropper-bottle.jpg",
+      "imageAlt": "Minimalist Vitamin C 10% Face Serum — dark glass dropper bottle",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Treat · Brighten",
+      "tags": [
+        "Dry skin",
+        "Dullness",
+        "Glow"
+      ],
+      "use": "AM",
+      "useExtras": [
+        {
+          "label": "Key active",
+          "value": "Vitamin C 10% (SAP)"
+        }
+      ],
+      "keyActives": [
+        "Vitamin C 10% (SAP)"
+      ],
+      "waName": "Minimalist Vitamin C 10% Face Serum",
+      "ariaName": "Minimalist Vitamin C 10% Face Serum",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-green-tea-pore-cleansing-face-wash",
+      "name": "Green Tea Pore Cleansing Face Wash",
+      "brand": "Plum",
+      "category": "cleanser",
+      "categories": [
+        "cleanser"
+      ],
+      "description": "Plum’s best-known face wash for oily, acne-prone skin. Green tea helps keep excess oil and clogged pores in check while the soft gel cleans without stripping.",
+      "image": "images/plum-green-tea-pore-cleansing-face-wash-white-tube-with-gree.jpg",
+      "imageAlt": "Plum Green Tea Pore Cleansing Face Wash — white tube with green Plum logo and green tea leaves",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Cleanse",
+      "tags": [
+        "Acne",
+        "Oily skin",
+        "Pores"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key ingredient",
+          "value": "Green Tea"
+        }
+      ],
+      "keyActives": [
+        "Green Tea"
+      ],
+      "waName": "Plum Green Tea Pore Cleansing Face Wash",
+      "ariaName": "Plum Green Tea Pore Cleansing Face Wash",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-green-tea-renewed-clarity-night-gel",
+      "name": "Green Tea Renewed Clarity Night Gel",
+      "brand": "Plum",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer",
+        "overnight"
+      ],
+      "description": "A light overnight gel moisturizer for oily and combination skin — hydrates while you sleep without a heavy or greasy layer, so you wake up less shiny.",
+      "image": "images/plum-green-tea-renewed-clarity-night-gel-open-green-gel-jar.jpg",
+      "imageAlt": "Plum Green Tea Renewed Clarity Night Gel — open green gel jar with silver lid",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Moisturise · PM",
+      "tags": [
+        "Oily skin",
+        "Acne-prone",
+        "Overnight gel"
+      ],
+      "use": "PM, last step",
+      "useExtras": [
+        {
+          "label": "Key ingredient",
+          "value": "Green Tea"
+        }
+      ],
+      "keyActives": [
+        "Green Tea"
+      ],
+      "waName": "Plum Green Tea Renewed Clarity Night Gel",
+      "ariaName": "Plum Green Tea Renewed Clarity Night Gel",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "the-derma-co-1-salicylic-acid-gel-face-wash",
+      "name": "1% Salicylic Acid Gel Face Wash",
+      "brand": "The Derma Co",
+      "category": "cleanser",
+      "categories": [
+        "cleanser"
+      ],
+      "description": "A dermatologist-designed gel wash for active acne — salicylic acid works inside pores while witch hazel and willow bark help calm oily, breakout-prone skin.",
+      "image": "images/the-derma-co-1-salicylic-acid-gel-face-wash-blue-and-white-t.jpg",
+      "imageAlt": "The Derma Co 1% Salicylic Acid Gel Face Wash — blue and white tube",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Cleanse",
+      "tags": [
+        "Acne",
+        "Oily skin",
+        "Active breakouts"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Salicylic Acid 1% + Witch Hazel + Willow Bark"
+        }
+      ],
+      "keyActives": [
+        "Salicylic Acid 1%",
+        "Witch Hazel",
+        "Willow Bark"
+      ],
+      "waName": "The Derma Co 1% Salicylic Acid Gel Face Wash",
+      "ariaName": "The Derma Co 1% Salicylic Acid Gel Face Wash",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "the-derma-co-10-niacinamide-face-serum",
+      "name": "10% Niacinamide Face Serum",
+      "brand": "The Derma Co",
+      "category": "serum",
+      "categories": [
+        "serum"
+      ],
+      "description": "The Derma Co’s bestseller for acne marks — niacinamide with zinc PCA helps fade post-acne marks and balance oil on acne-prone skin.",
+      "image": "images/the-derma-co-10-niacinamide-face-serum-purple-dropper-bottle.jpg",
+      "imageAlt": "The Derma Co 10% Niacinamide Face Serum — purple dropper bottle beside its box",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Treat",
+      "tags": [
+        "Acne marks",
+        "Oily skin",
+        "Uneven tone"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Niacinamide 10% + Zinc PCA"
+        }
+      ],
+      "keyActives": [
+        "Niacinamide 10%",
+        "Zinc PCA"
+      ],
+      "waName": "The Derma Co 10% Niacinamide Face Serum",
+      "ariaName": "The Derma Co 10% Niacinamide Face Serum",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "the-derma-co-oil-free-daily-face-moisturizer",
+      "name": "Oil-Free Daily Face Moisturizer",
+      "brand": "The Derma Co",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer"
+      ],
+      "description": "A lightweight, non-greasy daily moisturizer for hydrated skin without the shine — hyaluronic acid and ceramides keep skin plump and supple, while multivitamins nourish with no greasy residue.",
+      "image": "images/the-derma-co-oil-free-daily-face-moisturizer-green-and-white.jpg",
+      "imageAlt": "The Derma Co Oil-Free Daily Face Moisturizer — green and white tube, 100 g",
+      "available": true,
+      "skinConcerns": [
+        "oily",
+        "dry"
+      ],
+      "step": "Moisturise",
+      "tags": [
+        "Oil-free",
+        "Non-greasy",
+        "Hydration"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Hyaluronic Acid + Ceramides + Multivitamins"
+        }
+      ],
+      "keyActives": [
+        "Hyaluronic Acid",
+        "Ceramides",
+        "Multivitamins"
+      ],
+      "waName": "The Derma Co Oil-Free Daily Face Moisturizer",
+      "ariaName": "The Derma Co Oil-Free Daily Face Moisturizer",
+      "isNew": true,
+      "isFeatured": false
+    },
+    {
+      "id": "the-derma-co-pore-minimizing-daily-face-moisturizer",
+      "name": "Pore Minimizing Daily Face Moisturizer",
+      "brand": "The Derma Co",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer"
+      ],
+      "description": "Made for open, clogged pores and dehydrated skin — 3% niacinamide and p-REFINYL® help minimise enlarged pores and control excess oil, while 3% PHA gently smooths skin texture.",
+      "image": "images/the-derma-co-pore-minimizing-daily-face-moisturizer-green-an.jpg",
+      "imageAlt": "The Derma Co Pore Minimizing Daily Face Moisturizer — green and white tube, 50 g",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Moisturise",
+      "tags": [
+        "Open pores",
+        "Oily skin",
+        "Oil control"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Niacinamide 3% + PHA 3% + p-REFINYL®"
+        }
+      ],
+      "keyActives": [
+        "Niacinamide 3%",
+        "PHA 3%",
+        "p-REFINYL®"
+      ],
+      "waName": "The Derma Co Pore Minimizing Daily Face Moisturizer",
+      "ariaName": "The Derma Co Pore Minimizing Daily Face Moisturizer",
+      "isNew": true,
+      "isFeatured": false
+    },
+    {
+      "id": "the-derma-co-1-salicylic-acid-oil-free-moisturizer",
+      "name": "1% Salicylic Acid Oil-Free Moisturizer",
+      "brand": "The Derma Co",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer"
+      ],
+      "description": "The moisturizer for active acne — 1% salicylic acid clears excess oil and unclogs pores to fight breakouts, while oat extract soothes and hydrates without greasy residue, for a matte finish.",
+      "image": "images/the-derma-co-1-salicylic-acid-oil-free-daily-face-moisturize.jpg",
+      "imageAlt": "The Derma Co 1% Salicylic Acid Oil-Free Daily Face Moisturizer — green and white tube, 50 g",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Moisturise",
+      "tags": [
+        "Active acne",
+        "Oily skin",
+        "Oil-free"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Salicylic Acid 1% + Oat Extract"
+        }
+      ],
+      "keyActives": [
+        "Salicylic Acid 1%",
+        "Oat Extract"
+      ],
+      "waName": "The Derma Co 1% Salicylic Acid Oil-Free Moisturizer",
+      "ariaName": "The Derma Co 1% Salicylic Acid Oil-Free Moisturizer",
+      "isNew": true,
+      "isFeatured": false
+    },
+    {
+      "id": "cetaphil-gentle-skin-cleanser",
+      "name": "Gentle Skin Cleanser",
+      "brand": "Cetaphil",
+      "category": "cleanser",
+      "categories": [
+        "cleanser"
+      ],
+      "description": "The classic gentle cleanser for dry to normal, sensitive skin — cleanses while hydrating, so skin never feels tight or stripped after washing.",
+      "image": "images/cetaphil-gentle-skin-cleanser-white-bottle-with-blue-cap-and.jpg",
+      "imageAlt": "Cetaphil Gentle Skin Cleanser — white bottle with blue cap and Cetaphil logo",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Cleanse",
+      "tags": [
+        "Dry skin",
+        "Sensitive",
+        "Daily cleanse"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key ingredients",
+          "value": "Glycerin + Vitamin B3 + Pro-Vitamin B5"
+        }
+      ],
+      "keyActives": [
+        "Glycerin",
+        "Vitamin B3",
+        "Pro-Vitamin B5"
+      ],
+      "waName": "Cetaphil Gentle Skin Cleanser",
+      "ariaName": "Cetaphil Gentle Skin Cleanser",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "cetaphil-moisturizing-cream",
+      "name": "Moisturizing Cream",
+      "brand": "Cetaphil",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer"
+      ],
+      "description": "A rich, dermatologist-trusted cream for dry to normal, sensitive skin — deep moisture that helps restore the skin barrier and lasts for up to 48 hours.",
+      "image": "images/cetaphil-moisturizing-cream-white-jar-with-green-lid.jpg",
+      "imageAlt": "Cetaphil Moisturizing Cream — white jar with green lid",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Moisturise",
+      "tags": [
+        "Dry skin",
+        "Sensitive",
+        "Barrier care"
+      ],
+      "use": "AM & PM, generously at night",
+      "useExtras": [
+        {
+          "label": "Key ingredients",
+          "value": "Sweet Almond Oil + Vitamins E, B3 & B5"
+        }
+      ],
+      "keyActives": [
+        "Sweet Almond Oil",
+        "Vitamins E, B3 & B5"
+      ],
+      "waName": "Cetaphil Moisturizing Cream",
+      "ariaName": "Cetaphil Moisturizing Cream",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dr-sheths-ceramide-and-vitamin-c-sunscreen-spf-50",
+      "name": "Ceramide & Vitamin C Sunscreen SPF 50",
+      "brand": "Dr. Sheth's",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "A sunscreen made for Indian skin that does more than protect — ceramides support the barrier while Vitamin C works on brightness, in a finish all skin types can wear.",
+      "image": "images/dr-sheth-s-ceramide-and-vitamin-c-sunscreen-spf-50-yellow-an.jpg",
+      "imageAlt": "Dr. Sheth's Ceramide and Vitamin C Sunscreen SPF 50 — yellow and white tube beside an orange slice",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "All skin types",
+        "Daily SPF",
+        "Brightening"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Ceramide Complex 1% + Vitamin C Complex 2% + Hyaluronic Acid 1%"
+        }
+      ],
+      "keyActives": [
+        "Ceramide Complex 1%",
+        "Vitamin C Complex 2%",
+        "Hyaluronic Acid 1%"
+      ],
+      "waName": "Dr. Sheth's Ceramide & Vitamin C Sunscreen SPF 50",
+      "ariaName": "Dr. Sheth's Ceramide & Vitamin C Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dr-sheths-haldi-and-hyaluronic-acid-sleeping-mask",
+      "name": "Haldi & Hyaluronic Acid Sleeping Mask",
+      "brand": "Dr. Sheth's",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer",
+        "overnight"
+      ],
+      "description": "An overnight mask for dull, tired, dry skin — haldi (turmeric) and hyaluronic acid with ceramides and squalane nourish and repair while you sleep.",
+      "image": "images/dr-sheth-s-haldi-and-hyaluronic-acid-sleeping-mask-tube-besi.webp",
+      "imageAlt": "Dr. Sheth's Haldi and Hyaluronic Acid Sleeping Mask — tube beside its box",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Overnight · PM",
+      "tags": [
+        "Dry skin",
+        "Dullness",
+        "Overnight repair"
+      ],
+      "use": "PM, as the last step, 2–3 nights a week",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Hyaluronic Acid + Ceramide Complex + Squalane + Turmeric"
+        }
+      ],
+      "keyActives": [
+        "Hyaluronic Acid",
+        "Ceramide Complex",
+        "Squalane",
+        "Turmeric"
+      ],
+      "waName": "Dr. Sheth's Haldi & Hyaluronic Acid Sleeping Mask",
+      "ariaName": "Dr. Sheth's Haldi & Hyaluronic Acid Sleeping Mask",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "mamaearth-tea-tree-foaming-face-wash",
+      "name": "Tea Tree Foaming Face Wash",
+      "brand": "Mamaearth",
+      "category": "cleanser",
+      "categories": [
+        "cleanser"
+      ],
+      "description": "Mamaearth’s go-to wash for acne and pimples — tea tree with salicylic acid in a soft foaming wash with a built-in brush for a deeper clean.",
+      "image": "images/mamaearth-tea-tree-foaming-face-wash-white-foaming-bottle-wi.jpg",
+      "imageAlt": "Mamaearth Tea Tree Foaming Face Wash — white foaming bottle with brush cap",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Cleanse",
+      "tags": [
+        "Acne",
+        "Oily skin",
+        "Pimples"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Tea Tree + Salicylic Acid"
+        }
+      ],
+      "keyActives": [
+        "Tea Tree",
+        "Salicylic Acid"
+      ],
+      "waName": "Mamaearth Tea Tree Foaming Face Wash",
+      "ariaName": "Mamaearth Tea Tree Foaming Face Wash",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "mamaearth-vitamin-c-daily-glow-face-serum",
+      "name": "Vitamin C Daily Glow Face Serum",
+      "brand": "Mamaearth",
+      "category": "serum",
+      "categories": [
+        "serum"
+      ],
+      "description": "For skin that looks dull and tired — Vitamin C with turmeric for a daily glow boost and more even-looking tone, sealed with moisturizer and SPF.",
+      "image": "images/mamaearth-vitamin-c-daily-glow-face-serum-white-pump-bottle.jpg",
+      "imageAlt": "Mamaearth Vitamin C Daily Glow Face Serum — white pump bottle with orange 50x Vitamin C label",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Treat · Brighten",
+      "tags": [
+        "Dry skin",
+        "Dullness",
+        "Glow"
+      ],
+      "use": "AM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Vitamin C + Turmeric"
+        }
+      ],
+      "keyActives": [
+        "Vitamin C",
+        "Turmeric"
+      ],
+      "waName": "Mamaearth Vitamin C Daily Glow Face Serum",
+      "ariaName": "Mamaearth Vitamin C Daily Glow Face Serum",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-vitamin-c-e-super-bright-sunscreen-spf-50-pa",
+      "name": "Vitamin C + E Super Bright Sunscreen SPF 50 PA++++",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Dot & Key’s water-light sunscreen fluid — high SPF 50 PA++++ protection with Vitamin C + E for glow, in a light texture oily skin can wear every day.",
+      "image": "images/dot-key-vitamin-c-e-super-bright-sunscreen-spf-50-yellow-bot.jpg",
+      "imageAlt": "Dot & Key Vitamin C + E Super Bright Sunscreen SPF 50 — yellow bottle on oranges",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "All skin types",
+        "Daily SPF",
+        "Glow"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Vitamin C + E + Sicilian Blood Orange"
+        }
+      ],
+      "keyActives": [
+        "Vitamin C",
+        "E",
+        "Sicilian Blood Orange"
+      ],
+      "waName": "Dot & Key Vitamin C + E Super Bright Sunscreen SPF 50",
+      "ariaName": "Dot & Key Vitamin C + E Super Bright Sunscreen SPF 50 PA++++",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-watermelon-cooling-icy-gel-moisturizer",
+      "name": "Watermelon Cooling Icy Gel Moisturizer",
+      "brand": "Dot & Key",
+      "category": "moisturizer",
+      "categories": [
+        "moisturizer"
+      ],
+      "description": "A cooling gel moisturizer that hydrates without heaviness — watermelon and hyaluronic acid refresh dull, tired skin, while niacinamide helps control excess oil.",
+      "image": "images/dot-key-watermelon-cooling-icy-gel-moisturizer-pink-gel-jar.webp",
+      "imageAlt": "Dot & Key Watermelon Cooling Icy Gel Moisturizer — pink gel jar",
+      "available": true,
+      "skinConcerns": [
+        "oily",
+        "dry"
+      ],
+      "step": "Moisturise",
+      "tags": [
+        "Oily skin",
+        "Hydration",
+        "Cooling gel"
+      ],
+      "use": "AM & PM",
+      "useExtras": [
+        {
+          "label": "Key actives",
+          "value": "Watermelon + Hyaluronic Acid + Niacinamide"
+        }
+      ],
+      "keyActives": [
+        "Watermelon",
+        "Hyaluronic Acid",
+        "Niacinamide"
+      ],
+      "waName": "Dot & Key Watermelon Cooling Icy Gel Moisturizer",
+      "ariaName": "Dot & Key Watermelon Cooling Icy Gel Moisturizer",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-multi-vitamin-spf-50-sunscreen",
+      "name": "Multi-Vitamin SPF 50 Sunscreen",
+      "brand": "Minimalist",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Minimalist’s original sunscreen — a moisturiser-meets-sunscreen with Vitamins B, E & F. Light texture that disappears into a natural, moisturised, non-shiny finish with no white cast.",
+      "image": "images/minimalist-multi-vitamin-spf-50-sunscreen-white-tube-with-bl.jpg",
+      "imageAlt": "Minimalist Multi-Vitamin SPF 50 Sunscreen — white tube with black cap, SPF 50 broad spectrum PA++++ label",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "All skin types",
+        "Daily SPF",
+        "No white cast"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50 PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Niacinamide + Vitamins B5, E & F"
+        }
+      ],
+      "keyActives": [
+        "Niacinamide",
+        "Vitamins B5, E & F"
+      ],
+      "waName": "Minimalist Multi-Vitamin SPF 50 Sunscreen",
+      "ariaName": "Minimalist Multi-Vitamin SPF 50 Sunscreen",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-sunscreen-spf-60-pa",
+      "name": "Sunscreen SPF 60 PA++++",
+      "brand": "Minimalist",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Minimalist’s highest-protection sunscreen, made for sensitive and acne-prone skin — pregnancy-safe, non-irritant and no white cast, with potent antioxidants alongside advanced UV filters.",
+      "image": "images/minimalist-sunscreen-spf-60-pa-white-tube-beside-its-box.jpg",
+      "imageAlt": "Minimalist Sunscreen SPF 60 PA++++ — white tube beside its box",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Sensitive",
+        "Acne-prone",
+        "Pregnancy-safe"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 60 PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Hyaluronic Acid + Vitamin E"
+        }
+      ],
+      "keyActives": [
+        "Hyaluronic Acid",
+        "Vitamin E"
+      ],
+      "waName": "Minimalist Sunscreen SPF 60",
+      "ariaName": "Minimalist Sunscreen SPF 60",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-invisible-sunscreen-gel-spf-40-pa",
+      "name": "Invisible Sunscreen Gel SPF 40 PA+++",
+      "brand": "Minimalist",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "An ultra-light, completely invisible gel sunscreen with a matte finish — water and sweat resistant, so it is the one oily skin reaches for under makeup and on humid days.",
+      "image": "images/minimalist-invisible-sunscreen-gel-spf-40-pa-clear-gel-tube.webp",
+      "imageAlt": "Minimalist Invisible Sunscreen Gel SPF 40 PA+++ — clear gel tube",
+      "available": true,
+      "skinConcerns": [
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Oily skin",
+        "Matte finish",
+        "Water resistant"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 40 PA+++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Tomato Extract + Squalane + Jojoba Oil"
+        }
+      ],
+      "keyActives": [
+        "Tomato Extract",
+        "Squalane",
+        "Jojoba Oil"
+      ],
+      "waName": "Minimalist Invisible Sunscreen Gel SPF 40",
+      "ariaName": "Minimalist Invisible Sunscreen Gel SPF 40",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "minimalist-spf-30-body-lotion",
+      "name": "SPF 30 Body Lotion",
+      "brand": "Minimalist",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Sun protection for the rest of you — a nourishing body lotion with broad-spectrum SPF 30 for arms, legs and neck, so exposed skin is covered, not just your face.",
+      "image": "images/minimalist-spf-30-body-lotion-sunscreen-pump-bottle.webp",
+      "imageAlt": "Minimalist SPF 30 Body Lotion sunscreen — pump bottle",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · Body",
+      "tags": [
+        "Body SPF",
+        "All skin types",
+        "Daily protection"
+      ],
+      "use": "AM, on exposed body skin",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 30 PA+++"
+        },
+        {
+          "label": "Key ingredients",
+          "value": "Vitamin E + Glycerin + Green Tea Extract"
+        }
+      ],
+      "keyActives": [
+        "Vitamin E",
+        "Glycerin",
+        "Green Tea Extract"
+      ],
+      "waName": "Minimalist SPF 30 Body Lotion",
+      "ariaName": "Minimalist SPF 30 Body Lotion",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-2-niacinamide-and-rice-water-spf-50-sunscreen",
+      "name": "2% Niacinamide & Rice Water SPF 50 Sunscreen",
+      "brand": "Plum",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Plum’s flagship hybrid sunscreen — broad-spectrum SPF 50 PA++++ with niacinamide and rice water for 3x tan reduction and brighter-looking skin, with no white cast.",
+      "image": "images/plum-2-niacinamide-and-rice-water-hybrid-sunscreen-spf-50-pa.webp",
+      "imageAlt": "Plum 2% Niacinamide and Rice Water Hybrid Sunscreen SPF 50 PA++++ — white tube on blue background",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "All skin types",
+        "Tan reduction",
+        "Brightening"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50 PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Niacinamide 2% + Rice Water"
+        }
+      ],
+      "keyActives": [
+        "Niacinamide 2%",
+        "Rice Water"
+      ],
+      "waName": "Plum 2% Niacinamide & Rice Water SPF 50 Sunscreen",
+      "ariaName": "Plum 2% Niacinamide & Rice Water SPF 50 Sunscreen",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-green-tea-and-zinc-super-matte-sunscreen-gel-spf-50",
+      "name": "Green Tea & Zinc Super-Matte Sunscreen Gel SPF 50",
+      "brand": "Plum",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "The Plum sunscreen made for oily, acne-prone skin — a super-matte gel with instant oil reduction and 120 minutes of water resistance, so shine stays down all day.",
+      "image": "images/plum-green-tea-and-zinc-super-matte-sunscreen-gel-spf-50-pa.jpg",
+      "imageAlt": "Plum Green Tea and Zinc Super-Matte Sunscreen Gel SPF 50 PA++++ — pale green tube with green tea leaves",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Oily skin",
+        "Matte gel",
+        "Oil control"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50 PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Green Tea + Zinc"
+        }
+      ],
+      "keyActives": [
+        "Green Tea",
+        "Zinc"
+      ],
+      "waName": "Plum Green Tea & Zinc Super-Matte Sunscreen Gel SPF 50",
+      "ariaName": "Plum Green Tea & Zinc Super-Matte Sunscreen Gel SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-green-tea-daylight-sunscreen-gel-spf-35",
+      "name": "Green Tea Daylight Sunscreen Gel SPF 35",
+      "brand": "Plum",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Plum’s classic everyday sunscreen gel for oily and combination skin — feather-light, non-comedogenic and quick to absorb, with green tea antioxidants for daily city wear.",
+      "image": "images/plum-green-tea-daylight-sunscreen-gel-spf-35-pa-white-and-gr.jpg",
+      "imageAlt": "Plum Green Tea Daylight Sunscreen Gel SPF 35 PA+++ — white and green tube",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Oily skin",
+        "Combination",
+        "Lightweight gel"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 35 PA+++"
+        },
+        {
+          "label": "Key ingredient",
+          "value": "Green Tea"
+        }
+      ],
+      "keyActives": [
+        "Green Tea"
+      ],
+      "waName": "Plum Green Tea Daylight Sunscreen Gel SPF 35",
+      "ariaName": "Plum Green Tea Daylight Sunscreen Gel SPF 35",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-squalane-and-vitamin-e-dewy-bright-sunscreen-spf-50",
+      "name": "Squalane & Vitamin E Dewy-Bright Sunscreen SPF 50",
+      "brand": "Plum",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "The dry-skin pick from Plum — squalane and Vitamin E hydrate while SPF 50 protects, leaving a soft dewy-bright finish instead of a flat matte one.",
+      "image": "images/plum-squalane-and-vitamin-e-dewy-bright-sunscreen-spf-50-pa.jpg",
+      "imageAlt": "Plum Squalane and Vitamin E Dewy-Bright Sunscreen SPF 50 PA+++ — tube",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Dry skin",
+        "Dewy finish",
+        "Hydrating"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50 PA+++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Squalane + Vitamin E"
+        }
+      ],
+      "keyActives": [
+        "Squalane",
+        "Vitamin E"
+      ],
+      "waName": "Plum Squalane & Vitamin E Dewy-Bright Sunscreen SPF 50",
+      "ariaName": "Plum Squalane & Vitamin E Dewy-Bright Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-cica-and-hyaluronic-acid-aqua-light-sunscreen-spf-50",
+      "name": "Cica & Hyaluronic Acid Aqua-Light Sunscreen SPF 50",
+      "brand": "Plum",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "An aqua-light sunscreen that soothes as it protects — cica calms the look of redness while hyaluronic acid keeps combination and sensitive skin hydrated, never heavy.",
+      "image": "images/plum-cica-and-hyaluronic-acid-aqua-light-sunscreen-spf-50-pa.jpg",
+      "imageAlt": "Plum Cica and Hyaluronic Acid Aqua-Light Sunscreen SPF 50 PA+++ — tube",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Sensitive",
+        "Hydration",
+        "Lightweight"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50 PA+++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Cica + Hyaluronic Acid"
+        }
+      ],
+      "keyActives": [
+        "Cica",
+        "Hyaluronic Acid"
+      ],
+      "waName": "Plum Cica & Hyaluronic Acid Aqua-Light Sunscreen SPF 50",
+      "ariaName": "Plum Cica & Hyaluronic Acid Aqua-Light Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-chamomile-and-white-tea-sheer-matte-day-cream-spf-50",
+      "name": "Chamomile & White Tea Sheer Matte Day Cream SPF 50",
+      "brand": "Plum",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "A day cream and sunscreen in one — sheer matte finish with chamomile and white tea antioxidants, made for normal to combination skin that wants one simple morning step.",
+      "image": "images/plum-chamomile-and-white-tea-sheer-matte-day-cream-spf-50-ja.jpg",
+      "imageAlt": "Plum Chamomile and White Tea Sheer Matte Day Cream SPF 50 — jar",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Combination",
+        "Matte finish",
+        "Day cream + SPF"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50 PA+++"
+        },
+        {
+          "label": "Key ingredients",
+          "value": "Chamomile + White Tea"
+        }
+      ],
+      "keyActives": [
+        "Chamomile",
+        "White Tea"
+      ],
+      "waName": "Plum Chamomile & White Tea Sheer Matte Day Cream SPF 50",
+      "ariaName": "Plum Chamomile & White Tea Sheer Matte Day Cream SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-bright-years-all-day-defence-cream-spf-45",
+      "name": "Bright Years All-Day Defence Cream SPF 45",
+      "brand": "Plum",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Plum’s age-care day cream with SPF — rich defence for mature, drier skin that wants moisture, firmness support and sun protection in a single morning cream.",
+      "image": "images/plum-bright-years-all-day-defence-cream-spf-45-pa-jar.webp",
+      "imageAlt": "Plum Bright Years All-Day Defence Cream SPF 45 PA+++ — jar",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Mature skin",
+        "Dry skin",
+        "Age care"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 45 PA+++"
+        }
+      ],
+      "keyActives": [],
+      "waName": "Plum Bright Years All-Day Defence Cream SPF 45",
+      "ariaName": "Plum Bright Years All-Day Defence Cream SPF 45",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "plum-oat-and-ceramide-100-mineral-sunscreen-spf-50",
+      "name": "Oat & Ceramide 100% Mineral Sunscreen SPF 50",
+      "brand": "Plum",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Plum’s gentlest sunscreen — 100% mineral filters only, with oat and ceramides to protect and strengthen the barrier. The pick for sensitive, reactive and pregnancy skin.",
+      "image": "images/plum-oat-and-ceramide-complex-100-mineral-sunscreen-spf-50-p.jpg",
+      "imageAlt": "Plum Oat and Ceramide Complex 100% Mineral Sunscreen SPF 50 PA+++ — pink tube for sensitive skin",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Sensitive",
+        "100% Mineral",
+        "Barrier care"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50 PA+++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Oat + Ceramide Complex (mineral filters)"
+        }
+      ],
+      "keyActives": [
+        "Oat",
+        "Ceramide Complex (mineral filters)"
+      ],
+      "waName": "Plum Oat & Ceramide 100% Mineral Sunscreen SPF 50",
+      "ariaName": "Plum Oat & Ceramide 100% Mineral Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-watermelon-cooling-sunscreen-spf-50-pa",
+      "name": "Watermelon Cooling Sunscreen SPF 50 PA++++",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "An aqua-gel sunscreen with an instant cooling feel — watermelon and hyaluronic acid keep oily and combination skin hydrated and shine-free, even on humid days.",
+      "image": "images/dot-key-watermelon-cooling-sunscreen-spf-50-pa-pink-bottle-w.jpg",
+      "imageAlt": "Dot & Key Watermelon Cooling Sunscreen SPF 50+ PA++++ — pink bottle with watermelon slice",
+      "available": true,
+      "skinConcerns": [
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Oily skin",
+        "Cooling gel",
+        "Hydration"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50+ PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Watermelon + Hyaluronic Acid"
+        }
+      ],
+      "keyActives": [
+        "Watermelon",
+        "Hyaluronic Acid"
+      ],
+      "waName": "Dot & Key Watermelon Cooling Sunscreen SPF 50",
+      "ariaName": "Dot & Key Watermelon Cooling Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-cica-calming-mattifying-sunscreen-spf-50-pa",
+      "name": "Cica Calming Mattifying Sunscreen SPF 50 PA++++",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "A light gel-cream sunscreen for oily, acne-prone and sensitive skin — cica calms while niacinamide helps with marks, in an oil-free, fragrance-free matte finish.",
+      "image": "images/dot-key-cica-calming-mattifying-sunscreen-spf-50-pa-green-tu.jpg",
+      "imageAlt": "Dot & Key Cica Calming Mattifying Sunscreen SPF 50+ PA++++ — green tube with cica leaves",
+      "available": true,
+      "skinConcerns": [
+        "acne",
+        "oily"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Acne-prone",
+        "Matte finish",
+        "Fragrance-free"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50+ PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Cica + Niacinamide"
+        }
+      ],
+      "keyActives": [
+        "Cica",
+        "Niacinamide"
+      ],
+      "waName": "Dot & Key Cica Calming Mattifying Sunscreen SPF 50",
+      "ariaName": "Dot & Key Cica Calming Mattifying Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-blueberry-hydrate-barrier-repair-sunscreen-spf-50",
+      "name": "Blueberry Hydrate Barrier Repair Sunscreen SPF 50",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "A water-cream sunscreen for dry, dehydrated and sensitive skin — blueberry with 5 ceramides and hyaluronic acid for long-lasting moisture and barrier support, non-greasy.",
+      "image": "images/dot-key-blueberry-hydrate-barrier-repair-sunscreen-spf-50-pa.webp",
+      "imageAlt": "Dot & Key Blueberry Hydrate Barrier Repair Sunscreen SPF 50+ PA++++ — blue tube with blueberries",
+      "available": true,
+      "skinConcerns": [
+        "dry"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Dry skin",
+        "Barrier repair",
+        "Hydrating"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50+ PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Blueberry + 5 Ceramides + Hyaluronic Acid"
+        }
+      ],
+      "keyActives": [
+        "Blueberry",
+        "5 Ceramides",
+        "Hyaluronic Acid"
+      ],
+      "waName": "Dot & Key Blueberry Hydrate Barrier Repair Sunscreen SPF 50",
+      "ariaName": "Dot & Key Blueberry Hydrate Barrier Repair Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-strawberry-dew-tinted-sunscreen-spf-50-pa",
+      "name": "Strawberry Dew Tinted Sunscreen SPF 50 PA++++",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Sunscreen with sheer tinted coverage — evens out tone while it protects, with a dewy, natural finish and no white cast. Ask us on WhatsApp about shades in store.",
+      "image": "images/dot-key-strawberry-dew-tinted-sunscreen-spf-50-pa-tinted-tub.jpg",
+      "imageAlt": "Dot & Key Strawberry Dew Tinted Sunscreen SPF 50+ PA++++ — tinted tube",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "All skin types",
+        "Tinted",
+        "Even tone"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50+ PA++++"
+        },
+        {
+          "label": "Finish",
+          "value": "Dewy, sheer coverage"
+        }
+      ],
+      "keyActives": [],
+      "waName": "Dot & Key Strawberry Dew Tinted Sunscreen SPF 50",
+      "ariaName": "Dot & Key Strawberry Dew Tinted Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-strawberry-dew-sunscreen-stick-spf-50",
+      "name": "Strawberry Dew Sunscreen Stick SPF 50",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "The reapplication hero — a mess-free sunscreen stick you can glide on over makeup through the day, so topping up SPF never ruins your look.",
+      "image": "images/dot-key-strawberry-dew-sunscreen-stick-spf-50-pink-stick-for.webp",
+      "imageAlt": "Dot & Key Strawberry Dew Sunscreen Stick SPF 50 — pink stick for on-the-go reapplication",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · Reapply",
+      "tags": [
+        "Reapplication",
+        "On-the-go",
+        "Over makeup"
+      ],
+      "use": "AM + reapply every 2–3 hours outdoors",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50 PA++++"
+        }
+      ],
+      "keyActives": [],
+      "waName": "Dot & Key Strawberry Dew Sunscreen Stick SPF 50",
+      "ariaName": "Dot & Key Strawberry Dew Sunscreen Stick SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-mango-detan-gel-sunscreen-spf-50",
+      "name": "Mango + Detan Gel Sunscreen SPF 50",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "An oil-free gel sunscreen made for tan — helps reduce existing tan and prevent new tanning while it protects, for skin that spends time in strong sun.",
+      "image": "images/dot-key-mango-detan-gel-sunscreen-spf-50-yellow-gel-tube.webp",
+      "imageAlt": "Dot & Key Mango Detan Gel Sunscreen SPF 50 — yellow gel tube",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Tan care",
+        "Oil-free gel",
+        "All skin types"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50+ PA+++"
+        },
+        {
+          "label": "Key ingredient",
+          "value": "Mango"
+        }
+      ],
+      "keyActives": [
+        "Mango"
+      ],
+      "waName": "Dot & Key Mango Detan Gel Sunscreen SPF 50",
+      "ariaName": "Dot & Key Mango Detan Gel Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-lime-rush-swim-sports-sunscreen-spf-50-pa",
+      "name": "Lime Rush Swim + Sports Sunscreen SPF 50 PA++++",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "Built for active days — a swim and sports sunscreen that stays put through water and sweat, for workouts, swimming and long hours outdoors.",
+      "image": "images/dot-key-lime-rush-swim-and-sports-sunscreen-spf-50-pa-tube.webp",
+      "imageAlt": "Dot & Key Lime Rush Swim and Sports Sunscreen SPF 50+ PA++++ — tube",
+      "available": true,
+      "skinConcerns": [
+        "oily",
+        "acne"
+      ],
+      "step": "Protect · Sports",
+      "tags": [
+        "Sports",
+        "Water resistant",
+        "Outdoor"
+      ],
+      "use": "AM + before outdoor activity",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50+ PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Lime + Niacinamide"
+        }
+      ],
+      "keyActives": [
+        "Lime",
+        "Niacinamide"
+      ],
+      "waName": "Dot & Key Lime Rush Swim + Sports Sunscreen SPF 50",
+      "ariaName": "Dot & Key Lime Rush Swim + Sports Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    },
+    {
+      "id": "dot-and-key-dragon-fruit-bounce-sunscreen-spf-50-pa",
+      "name": "Dragon Fruit Bounce Sunscreen SPF 50 PA++++",
+      "brand": "Dot & Key",
+      "category": "sunscreen",
+      "categories": [
+        "sunscreen"
+      ],
+      "description": "A cushiony gel sunscreen with a bouncy, hydrated finish — ectoin and multi-layer hyaluronic acid with niacinamide, for skin that wants bounce, not grease.",
+      "image": "images/dot-key-dragon-fruit-bounce-sunscreen-spf-50-pa-tube.jpg",
+      "imageAlt": "Dot & Key Dragon Fruit Bounce Sunscreen SPF 50+ PA++++ — tube",
+      "available": true,
+      "skinConcerns": [
+        "dry",
+        "oily"
+      ],
+      "step": "Protect · AM",
+      "tags": [
+        "Hydration",
+        "Bouncy finish",
+        "All skin types"
+      ],
+      "use": "AM, last step",
+      "useExtras": [
+        {
+          "label": "Protection",
+          "value": "SPF 50+ PA++++"
+        },
+        {
+          "label": "Key actives",
+          "value": "Dragon Fruit + Ectoin + Hyaluronic Acid + Niacinamide"
+        }
+      ],
+      "keyActives": [
+        "Dragon Fruit",
+        "Ectoin",
+        "Hyaluronic Acid",
+        "Niacinamide"
+      ],
+      "waName": "Dot & Key Dragon Fruit Bounce Sunscreen SPF 50",
+      "ariaName": "Dot & Key Dragon Fruit Bounce Sunscreen SPF 50",
+      "isNew": false,
+      "isFeatured": false
+    }
+  ]
+}

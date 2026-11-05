@@ -10,6 +10,8 @@ NS Enterprises is a showcase-only website. It displays products, helps customers
 
 ## Catalogue
 
+The product catalogue lives in a single data file, **`data/products.json`** — it is the only place product information is written. The page loads it and renders every product card from it (main catalogue, shop-by-category grid, and the "Just Added" spotlight, which shows the products marked `isNew`). Each product has an `available` flag: `true` means it is displayed and can be recommended by the Routine Builder; `false` means it is hidden everywhere and never recommended. There are no prices anywhere on the site — it is showcase-only.
+
 44 products across 7 brands:
 
 - Minimalist
@@ -44,17 +46,21 @@ The site serves two dedicated layouts, each designed for its own screen:
 ns-enterprises/
 ├── index.html          # Page structure (desktop + mobile layouts)
 ├── README.md           # This file
+├── data/
+│   └── products.json   # The catalogue — all 44 products, the single source of truth
 ├── assets/             # Code resources
 │   ├── css/
 │   │   └── style.css   # All styling
 │   └── js/
-│       └── script.js   # Search, filters, Routine Builder, WhatsApp links
+│       ├── products.js # Loads products.json, validates it, builds product cards
+│       ├── filters.js  # Search, brand/category/concern filters, live counter
+│       └── script.js   # Renders the catalogue, Routine Builder, WhatsApp links
 └── images/             # Media — real product photos (JPG/WebP, one file per product)
 ```
 
 ## Run locally
 
-No build step and no server required — open `index.html` in any browser. To test exactly as it runs online, serve the folder with any static server, for example:
+The catalogue is loaded with `fetch`, so the site must be served over HTTP — opening `index.html` directly with `file://` will not load the products. Serve the folder with any static server, for example:
 
 ```bash
 python3 -m http.server 8000
@@ -71,8 +77,10 @@ The site is hosted free with **GitHub Pages**, directly from this repository (`m
 To add a product:
 
 1. Add its real photo to `images/` (named after the product).
-2. Add a product card to `index.html`, following the existing cards, with the correct brand, category, and skin-concern tags.
+2. Add one entry to `data/products.json` — copy an existing entry and change the `id`, `name`, `brand`, `category`, `categories`, `description`, `image`, `skinConcerns`, `step`, `tags`, `use`, `useExtras` and `keyActives`. Use only information the product actually states (never invent ingredients or strengths); set `isNew` to `true` only while it is a new arrival. Keep `available` as `true` unless the product should be hidden from the site.
 3. Commit and push — the live site updates on its own.
+
+To hide a product without deleting it, set its `available` to `false` in `data/products.json` — it disappears from the catalogue, the category grid, the "Just Added" spotlight, and the Routine Builder. To remove it entirely, delete its entry from `data/products.json` (and its photo from `images/` if it is no longer needed).
 
 ---
 
