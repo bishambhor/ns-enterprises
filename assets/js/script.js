@@ -52,114 +52,224 @@
     showLoadError();
   }
 
-  /* ---- Routine Builder ---- */
-  var chosen = { skin:null, concern:null, react:null, level:null };
-  var skinLabels = { dry:"dry skin", oily:"oily skin", combination:"combination skin", sensitive:"sensitive skin" };
-  var concernLabels = { acne:"acne & breakouts", oiliness:"oiliness & pores", dryness:"dryness & tightness", dullness:"dullness & marks", sensitivity:"redness & sensitivity" };
-  function wireRow(rowId, key){
-    var row = document.getElementById(rowId);
-    if(!row) return;
-    row.querySelectorAll(".opt").forEach(function(btn){
-      btn.addEventListener("click", function(){
-        row.querySelectorAll(".opt").forEach(function(b){ b.classList.remove("sel"); });
-        btn.classList.add("sel");
-        chosen[key] = btn.getAttribute("data-val");
-        renderResult();
-      });
-    });
+  /* ---- Routine Builder: 5-question questionnaire + engine results ---- */
+  /* Questions are defined here (UI text); the recommendation logic lives
+   * in assets/js/routine-engine.js and only ever sees the answer values. */
+  var QUIZ = [
+    { key:"skin", title:"How does your skin usually feel?", hint:"",
+      multi:false, options:[
+        ["dry","Dry — tight, sometimes flaky"],
+        ["oily","Oily — shiny by midday"],
+        ["combination","Combination — oily T-zone, normal cheeks"],
+        ["normal","Normal — comfortable most days"],
+        ["sensitive","Sensitive — flushes or stings easily"],
+        ["notsure","Not sure — it changes"]
+      ]},
+    { key:"concerns", title:"What do you want to work on most?", hint:"Pick all that apply — you can choose more than one.",
+      multi:true, options:[
+        ["acne","Acne & breakouts"],
+        ["pigmentation","Pigmentation & dark spots"],
+        ["dullness","Dullness"],
+        ["dryness","Dryness & dehydration"],
+        ["ageing","Fine lines & ageing"],
+        ["general","General skincare maintenance"]
+      ]},
+    { key:"sensitivity", title:"How sensitive is your skin?", hint:"",
+      multi:false, options:[
+        ["none","Not sensitive — new products rarely bother me"],
+        ["sometimes","Occasionally irritated — sometimes tingles or flushes"],
+        ["very","Very sensitive — I have to be careful"]
+      ]},
+    { key:"experience", title:"How much experience do you have with active ingredients?", hint:"Actives are ingredients like Salicylic Acid, Vitamin C and Niacinamide.",
+      multi:false, options:[
+        ["beginner","Beginner — new to actives"],
+        ["intermediate","Intermediate — I use an active or two already"],
+        ["experienced","Experienced — I use strong actives regularly"]
+      ]},
+    { key:"complexity", title:"How do you want your routine to feel?", hint:"",
+      multi:false, options:[
+        ["simple","Simple — 2–3 steps"],
+        ["balanced","Balanced — 4–5 steps"],
+        ["complete","Complete — every step that fits"]
+      ]}
+  ];
+  var SENSITIVITY_LABELS = { none:"Not sensitive", sometimes:"Occasionally irritated", very:"Very sensitive" };
+  var STEP_LABELS = { cleanser:"Cleanser", toner:"Toner", serum:"Treatment serum", moisturizer:"Moisturizer", sunscreen:"Sunscreen", targeted:"Targeted treatment" };
+
+  var answers = { skin:null, concerns:[], sensitivity:null, experience:null, complexity:null };
+  var quizStep = 0;
+  var quizPanel = document.getElementById("quizPanel");
+  var quizProgress = document.getElementById("quizProgress");
+  var quizTitle = document.getElementById("quizTitle");
+  var quizHint = document.getElementById("quizHint");
+  var quizOptions = document.getElementById("quizOptions");
+  var quizError = document.getElementById("quizError");
+  var quizBack = document.getElementById("quizBack");
+  var quizNext = document.getElementById("quizNext");
+  var finderResult = document.getElementById("finderResult");
+
+  function esc(s){
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
-  wireRow("skinRow","skin"); wireRow("concernRow","concern"); wireRow("reactRow","react"); wireRow("levelRow","level");
-  function buildRoutine(){
-    var skin = chosen.skin, concern = chosen.concern, react = chosen.react;
-    var level = chosen.level;
-    var isOily = (skin==="oily" || skin==="combination");
-    var isDry = (skin==="dry");
-    var isSensitive = (skin==="sensitive" || react==="reactive");
-    var cleanserAM, cleanserPM;
-    if((concern==="acne" || concern==="oiliness") && !isSensitive){
-      cleanserAM = ["Minimalist Salicylic Acid + LHA 2% Cleanser","Deep pore cleanse to start the day - massage 60 seconds"];
-      cleanserPM = ["Minimalist Salicylic Acid + LHA 2% Cleanser","Second cleanse of the day to clear oil and SPF"];
-    } else if(isDry || isSensitive){
-      cleanserAM = ["Lukewarm water only - no cleanser","Dry / reactive skin often needs no cleanser in the morning"];
-      cleanserPM = ["Minimalist Salicylic Acid + LHA 2% Cleanser - short, gentle cleanse","Use briefly and rinse well; on nights skin feels tight, rinse with water only and go straight to moisturizer"];
-    } else {
-      cleanserAM = ["Minimalist Salicylic Acid + LHA 2% Cleanser","A calm, thorough morning cleanse"];
-      cleanserPM = ["Minimalist Salicylic Acid + LHA 2% Cleanser","Work in for 60 seconds to lift the day and SPF"];
-    }
-    var treatAM;
-    if(concern==="dryness" || isDry) treatAM = ["Minimalist Hyaluronic + PGA 2% Serum","On damp skin - pulls water in before you seal it"];
-    else if(concern==="dullness") treatAM = ["Minimalist Vitamin C 10% Serum","Morning glow and more even tone - always under SPF"];
-    else if(concern==="sensitivity") treatAM = ["Minimalist Niacinamide 10% Serum","Calms the look of redness and supports the barrier"];
-    else treatAM = ["Minimalist Niacinamide 10% Serum","Balances oil, helps marks fade, keeps pores calmer"];
-    var treatPM, pmNote = "";
-    if(concern==="acne" || concern==="oiliness"){
-      if(isSensitive){ treatPM = ["Minimalist Salicylic Acid 2% Serum - start 2 nights/week","Targeted BHA for pores. Increase slowly only if no stinging"]; pmNote="Reactive skin + acne: introduce Salicylic Acid slowly and skip it on nights your skin stings."; }
-      else { treatPM = ["Minimalist Salicylic Acid 2% Serum - alternate nights","BHA inside pores for breakouts and blackheads. Niacinamide on the other nights"]; }
-    } else if(concern==="dryness" || isDry){
-      treatPM = ["Minimalist Hyaluronic + PGA 2% Serum","Rehydrate at night on damp skin, then seal well"];
-    } else if(concern==="dullness"){
-      treatPM = ["Minimalist Niacinamide 10% Serum","Night work on marks and uneven tone"];
-    } else {
-      treatPM = ["Minimalist Sepicalm 3% + Oat - as a soothing layer","Or skip treatment and go straight to moisturizer on reactive nights"];
-    }
-    var moist;
-    if(isDry) moist = ["Minimalist Ceramides 0.3% + Madecassoside Moisturizer","Barrier repair - generous layer, especially at night"];
-    else if(isSensitive || concern==="sensitivity") moist = ["Minimalist Sepicalm 3% + Oat Moisturizer","Soothes redness without a heavy, greasy finish"];
-    else if(isOily) moist = ["Minimalist Vitamin B5 10% Moisturizer","Oil-free hydration - no shine, no clogged feeling"];
-    else moist = ["Minimalist Vitamin B5 10% Moisturizer","Light daily hydration for combination skin"];
-    var spf = ["Minimalist Light Fluid SPF 50 Sunscreen","Last AM step, two-finger length for face and neck"];
-    var am = [cleanserAM, treatAM, moist, spf];
-    var pm = [cleanserPM, treatPM, moist];
-    if(level==="simple"){
-      am = [cleanserAM, moist, spf];
-      pm = [cleanserPM, moist];
-      if(concern==="acne" || concern==="oiliness"){ pm = [cleanserPM, treatPM, moist]; am = [cleanserAM, treatAM, moist, spf]; }
-    }
-    return {am:am, pm:pm, pmNote:pmNote};
+
+  function currentAnswered(){
+    var q = QUIZ[quizStep];
+    return q.multi ? answers.concerns.length > 0 : !!answers[q.key];
   }
-  function listHtml(steps){
-    var h = "<ol>";
-    steps.forEach(function(s){ h += "<li><div><b>" + s[0] + "</b><span>" + s[1] + "</span></div></li>"; });
-    return h + "</ol>";
-  }
-  function stepAvailable(step){
-    var name = step[0];
-    if (!window.NSProducts || !NSProducts.looksLikeProduct(name)) return true;
-    var p = NSProducts.findByDisplayName(name);
-    return !!(p && p.available);
-  }
-  function renderResult(){
-    var box = document.getElementById("finderResult");
+
+  function syncSteps(){
     document.querySelectorAll("#builderSteps span").forEach(function(s){
       var k = s.getAttribute("data-step");
-      s.classList.toggle("done", !!chosen[k]);
+      var done = k === "concerns" ? answers.concerns.length > 0 : !!answers[k];
+      s.classList.toggle("done", done);
     });
-    var missing = [];
-    if(!chosen.skin) missing.push("1 - skin type");
-    if(!chosen.concern) missing.push("2 - main concern");
-    if(!chosen.react) missing.push("3 - reactivity");
-    if(!chosen.level) missing.push("4 - routine style");
-    if(missing.length){
-      box.innerHTML = '<p class="placeholder">Almost there - still to answer: <b>' + missing.join(", ") + '</b>. Your routine builds itself as soon as all four are picked.</p>';
+  }
+
+  function renderQuiz(){
+    if (!quizPanel) return;
+    var q = QUIZ[quizStep];
+    quizProgress.textContent = "Question " + (quizStep + 1) + " of " + QUIZ.length;
+    quizTitle.textContent = q.title;
+    quizHint.textContent = q.hint || "";
+    quizHint.style.display = q.hint ? "" : "none";
+    quizError.hidden = true;
+    quizOptions.innerHTML = "";
+    q.options.forEach(function(opt){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "opt";
+      b.setAttribute("data-val", opt[0]);
+      b.textContent = opt[1];
+      var sel = q.multi ? answers.concerns.indexOf(opt[0]) !== -1 : answers[q.key] === opt[0];
+      if (sel) b.classList.add("sel");
+      b.addEventListener("click", function(){ onPick(opt[0]); });
+      quizOptions.appendChild(b);
+    });
+    quizBack.disabled = quizStep === 0;
+    quizNext.textContent = quizStep === QUIZ.length - 1 ? "See my routine" : "Next";
+    syncSteps();
+  }
+
+  function onPick(val){
+    var q = QUIZ[quizStep];
+    if (q.multi) {
+      var i = answers.concerns.indexOf(val);
+      if (i === -1) answers.concerns.push(val);
+      else answers.concerns.splice(i, 1);
+      renderQuiz();
+    } else {
+      answers[q.key] = val;
+      renderQuiz();
+    }
+  }
+
+  function goNext(){
+    if (!currentAnswered()) { quizError.hidden = false; return; }
+    quizError.hidden = true;
+    if (quizStep < QUIZ.length - 1) { quizStep++; renderQuiz(); return; }
+    showResults();
+  }
+
+  function goBack(){
+    if (quizStep > 0) { quizStep--; renderQuiz(); }
+  }
+
+  function partHtml(part){
+    var h = "";
+    part.steps.forEach(function(s, i){
+      var prod = s.product;
+      h += '<div class="r-card"><figure class="r-fig"><img src="' + esc(prod.image) + '" alt="' + esc(prod.imageAlt || NSProducts.fullName(prod)) + '" loading="lazy" /></figure><div class="r-body">'
+        + '<span class="r-step">Step ' + (i + 1) + " · " + esc(STEP_LABELS[s.role] || s.role) + "</span>"
+        + "<b>" + esc(NSProducts.fullName(prod)) + "</b>"
+        + '<span class="r-cat">' + esc(prod.brand) + " · " + esc(prod.step || prod.category) + "</span>"
+        + '<p class="r-why">' + esc(s.why.join(" — ")) + "</p>"
+        + '<p class="r-how"><b>How to use:</b> ' + esc(s.howTo) + "</p>"
+        + '<a class="mini-btn r-wa" href="' + NSProducts.waLink(prod) + '" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;background:#128c7e;border-color:#128c7e">Ask if available on WhatsApp</a>'
+        + "</div></div>";
+    });
+    part.skipped.forEach(function(sk){
+      h += '<div class="skip-note"><b>' + esc(STEP_LABELS[sk.role] || sk.role) + " — skipped:</b> " + esc(sk.reason) + "</div>";
+    });
+    if (!part.steps.length) {
+      h += '<p class="placeholder">No products fit this part of the day — please ask us on WhatsApp and we will help.</p>';
+    }
+    return h;
+  }
+
+  function resultHtml(result){
+    var p = result.profile;
+    var h = "<h3>Your personal routine</h3>";
+    h += '<div class="profile-summary">'
+      + "<span><b>Skin:</b> " + esc(p.skinLabel) + "</span>"
+      + "<span><b>Concerns:</b> " + esc(p.concernLabels.join(", ")) + "</span>"
+      + "<span><b>Sensitivity:</b> " + esc(SENSITIVITY_LABELS[p.sensitivity] || p.sensitivity) + "</span>"
+      + "<span><b>Experience:</b> " + esc(p.experience) + "</span>"
+      + "<span><b>Routine:</b> " + esc(p.complexity) + "</span>"
+      + "</div>";
+    h += '<div class="am-pm"><div><h4>Morning</h4>' + partHtml(result.morning) + '</div><div><h4>Evening</h4>' + partHtml(result.evening) + "</div></div>";
+    if (result.notes.length) {
+      h += '<div class="builder-note"><b>Good to know:</b> ' + esc(result.notes.join(" ")) + "</div>";
+    }
+    h += '<div class="builder-note"><b>Patch test:</b> ' + esc(result.patchTest) + "</div>";
+    h += '<div class="builder-note">' + esc(result.disclaimer) + "</div>";
+    h += '<div class="builder-actions">'
+      + '<button class="mini-btn ghost" id="editAnswers" type="button">Edit answers</button>'
+      + '<button class="mini-btn ghost" id="regenerateRoutine" type="button">Regenerate</button>'
+      + '<button class="mini-btn ghost" id="restartBuilder" type="button">Start again</button>'
+      + '<a class="mini-btn" id="routineWa" href="' + NSRoutineEngine.routineWaLink(answers, result) + '" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;background:#128c7e;border-color:#128c7e">Ask about my whole routine on WhatsApp</a>'
+      + "</div>";
+    return h;
+  }
+
+  function wireResultActions(result){
+    var editBtn = document.getElementById("editAnswers");
+    if (editBtn) editBtn.addEventListener("click", function(){
+      quizStep = 0;
+      renderQuiz();
+      if (quizPanel) quizPanel.scrollIntoView({behavior:"smooth", block:"start"});
+    });
+    var regenBtn = document.getElementById("regenerateRoutine");
+    if (regenBtn) regenBtn.addEventListener("click", function(){ showResults(); });
+    var restartBtn = document.getElementById("restartBuilder");
+    if (restartBtn) restartBtn.addEventListener("click", function(){
+      answers = { skin:null, concerns:[], sensitivity:null, experience:null, complexity:null };
+      quizStep = 0;
+      renderQuiz();
+      finderResult.innerHTML = '<p class="placeholder">Cleared — answer the five questions again to build a new routine.</p>';
+    });
+  }
+
+  function showResults(){
+    if (!window.NSRoutineEngine || !window.NSProducts) {
+      finderResult.innerHTML = '<p class="placeholder">The routine builder could not load. Please refresh the page and try again.</p>';
       return;
     }
-    var r = buildRoutine();
-    var am = r.am.filter(stepAvailable);
-    var pm = r.pm.filter(stepAvailable);
-    var intro = "For <b>" + skinLabels[chosen.skin] + "</b> focused on <b>" + concernLabels[chosen.concern] + "</b>" + (chosen.react==="reactive" ? " - built extra-gently because your skin is reactive." : chosen.react==="sometimes" ? " - with actives introduced steadily." : ".");
-    var caution = r.pmNote || (chosen.concern==="acne" ? "Give it 6-8 weeks of consistency. Do not add another strong active in the first two weeks." : "Give it 4-6 weeks of consistency before judging results. One new product at a time.");
-    if(chosen.level==="simple") caution += " You chose the simple version - once it feels easy for 2 weeks, add the treatment step from the complete routine.";
-    box.innerHTML = "<h3>Your personal routine</h3><p class='r-sub'>" + intro + "</p>"
-      + '<div class="am-pm"><div><h4>Morning</h4>' + listHtml(am) + '</div><div><h4>Evening</h4>' + listHtml(pm) + "</div></div>"
-      + '<div class="builder-note"><b>How to start:</b> ' + caution + ' Patch-test new actives first. All products listed are available in store at NS Enterprises - bring this list in and we will help you find them on the shelf.</div>'
-      + '<div class="builder-actions"><button class="mini-btn" id="restartBuilder" type="button">Start again</button><a class="mini-btn ghost" href="#concern" style="text-decoration:none;display:inline-block">See these products</a><a class="mini-btn" href="https://wa.me/918837074944?text=Hi%20NS%20Enterprises%2C%20I%20just%20built%20my%20routine%20on%20your%20site.%20Are%20the%20products%20in%20my%20routine%20available%20in%20store%3F" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;background:#128c7e;border-color:#128c7e">Ask availability on WhatsApp</a></div>';
-    var rb = document.getElementById("restartBuilder");
-    if(rb) rb.addEventListener("click", function(){
-      chosen = {skin:null, concern:null, react:null, level:null};
-      document.querySelectorAll("#finder .opt").forEach(function(b){ b.classList.remove("sel"); });
-      document.querySelectorAll("#builderSteps span").forEach(function(s){ s.classList.remove("done"); });
-      box.innerHTML = '<p class="placeholder">Cleared - answer the four questions again to build a new routine.</p>';
-    });
+    /* The catalogue may still be loading if the user answers very fast. */
+    if (NSProducts.all().length === 0) {
+      finderResult.innerHTML = '<p class="placeholder">Loading products…</p>';
+      NSProducts.ready.then(function(){ showResults(); }).catch(function(){
+        finderResult.innerHTML = '<p class="placeholder">Products could not be loaded. Please refresh the page and try again.</p>';
+      });
+      return;
+    }
+    var result = NSRoutineEngine.generate(answers, NSProducts.available());
+    finderResult.innerHTML = resultHtml(result);
+    wireResultActions(result);
+    syncSteps();
+    /* On phones the result sits below the quiz — bring it into view. */
+    if (window.matchMedia && window.matchMedia("(max-width: 820px)").matches) {
+      finderResult.scrollIntoView({behavior:"smooth", block:"start"});
+    }
+  }
+
+  if (quizPanel) {
+    quizBack.addEventListener("click", goBack);
+    quizNext.addEventListener("click", goNext);
+    renderQuiz();
   }
 
   /* ---- Ritual AM / PM ---- */

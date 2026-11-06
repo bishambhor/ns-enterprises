@@ -173,7 +173,7 @@
         </div>
         <a class="wa-banner-btn" href="https://wa.me/918837074944?text=Hi%20NS%20Enterprises%2C%20I%20want%20to%20check%20if%20a%20product%20is%20available%20in%20store." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Ask on WhatsApp · 88370 74944</a>
       </div>
-      <p style="color:var(--ink-soft);font-size:14.5px;margin:22px 0 0">Not sure which group is yours? Answer four quick questions in the Routine Builder below — it will pick from the Minimalist products for you.</p>
+      <p style="color:var(--ink-soft);font-size:14.5px;margin:22px 0 0">Not sure which group is yours? Answer five quick questions in the Routine Builder below — it will build a routine from the products in store for you.</p>
     </div>
   </section>
 
@@ -205,47 +205,31 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="sec-kicker">Skincare Routine Builder</span>
-        <h2>Answer 4 questions. Get your AM + PM routine.</h2>
-        <p>Built like we would in store: first your skin type, then your main concern, how reactive your skin is, and how much time you want to spend. Your routine is generated only from the Minimalist products on our shelves above.</p>
+        <h2>Answer 5 questions. Get your AM + PM routine.</h2>
+        <p>Built like we would in store: first your skin type, then your concerns, how sensitive your skin is, your experience with active ingredients, and how much time you want to spend. Your routine is generated only from the products in store, using simple scoring with safety rules — and it will tell you honestly when a step has no suitable product.</p>
       </div>
       <div class="finder-box reveal">
         <div class="builder-steps" id="builderSteps" aria-hidden="true">
           <span data-step="skin">1 · Skin type</span>
-          <span data-step="concern">2 · Concern</span>
-          <span data-step="react">3 · Reactivity</span>
-          <span data-step="level">4 · Routine style</span>
+          <span data-step="concerns">2 · Concerns</span>
+          <span data-step="sensitivity">3 · Sensitivity</span>
+          <span data-step="experience">4 · Experience</span>
+          <span data-step="complexity">5 · Routine style</span>
         </div>
         <div class="finder-grid">
-          <div>
-            <h3>1 · How does your skin usually feel?</h3>
-            <div class="opt-row" id="skinRow" role="group" aria-label="Skin type">
-              <button class="opt" data-val="dry">Dry — tight, sometimes flaky</button>
-              <button class="opt" data-val="oily">Oily — shiny by midday</button>
-              <button class="opt" data-val="combination">Combination — oily T-zone, normal cheeks</button>
-              <button class="opt" data-val="sensitive">Sensitive — flushes or stings easily</button>
-            </div>
-            <h3>2 · What do you want to work on most?</h3>
-            <div class="opt-row" id="concernRow" role="group" aria-label="Main concern">
-              <button class="opt" data-val="acne">Acne &amp; breakouts</button>
-              <button class="opt" data-val="oiliness">Oiliness &amp; pores</button>
-              <button class="opt" data-val="dryness">Dryness &amp; tightness</button>
-              <button class="opt" data-val="dullness">Dullness &amp; marks</button>
-              <button class="opt" data-val="sensitivity">Redness &amp; sensitivity</button>
-            </div>
-            <h3>3 · How reactive is your skin?</h3>
-            <div class="opt-row" id="reactRow" role="group" aria-label="Skin reactivity">
-              <button class="opt" data-val="calm">Calm — new products rarely bother me</button>
-              <button class="opt" data-val="sometimes">Sometimes — occasional tingling</button>
-              <button class="opt" data-val="reactive">Very reactive — I have to be careful</button>
-            </div>
-            <h3>4 · How do you want your routine to feel?</h3>
-            <div class="opt-row" id="levelRow" role="group" aria-label="Routine style">
-              <button class="opt" data-val="simple">Keep it simple — 3 steps</button>
-              <button class="opt" data-val="complete">Complete — 4–5 steps, best results</button>
+          <div class="quiz" id="quizPanel">
+            <p class="quiz-progress" id="quizProgress">Question 1 of 5</p>
+            <h3 id="quizTitle">How does your skin usually feel?</h3>
+            <p class="quiz-hint" id="quizHint"></p>
+            <div class="opt-row" id="quizOptions" role="group" aria-label="Question options"></div>
+            <p class="quiz-error" id="quizError" role="alert" hidden>Please pick an answer to continue.</p>
+            <div class="quiz-nav">
+              <button class="mini-btn ghost" id="quizBack" type="button">Back</button>
+              <button class="mini-btn" id="quizNext" type="button">Next</button>
             </div>
           </div>
           <div class="result" id="finderResult" aria-live="polite">
-            <p class="placeholder">Your personal routine will appear here. Start with question 1 — pick the skin type that sounds most like you on a normal day.</p>
+            <p class="placeholder">Your personal routine will appear here. Answer the five questions — it takes about a minute.</p>
           </div>
         </div>
       </div>
@@ -420,6 +404,7 @@
 
 <script src="assets/js/products.js" defer></script>
 <script src="assets/js/filters.js" defer></script>
+<script src="assets/js/routine-engine.js" defer></script>
 <script src="assets/js/script.js" defer></script>
 
 

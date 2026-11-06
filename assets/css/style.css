@@ -220,6 +220,29 @@
   .result li span{font-size:13.5px;color:var(--ink-soft)}
   .result .placeholder{color:var(--ink-soft);font-size:16px;margin:0}
 
+  /* ---------- Routine quiz + results ---------- */
+  .quiz-progress{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 8px}
+  .quiz-hint{color:var(--ink-soft);font-size:14.5px;margin:0 0 16px}
+  .quiz-error{color:#a33c2e;font-size:14px;margin:0 0 14px}
+  @media (prefers-color-scheme: dark){ .quiz-error{color:#e08a7a} }
+  .quiz-nav{display:flex;justify-content:space-between;gap:10px;margin-top:6px}
+  .quiz-nav .mini-btn[disabled]{opacity:.4;cursor:default}
+  .profile-summary{display:flex;flex-wrap:wrap;gap:8px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 15px;font-size:14px;color:var(--ink-soft);margin:0 0 16px}
+  .profile-summary b{color:var(--ink);font-weight:500}
+  .r-card{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:12px}
+  .r-fig{flex:none;width:64px}
+  .r-fig img{width:64px;height:64px;object-fit:cover;border-radius:9px;display:block}
+  .r-body{min-width:0}
+  .r-step{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px}
+  .r-card b{font-weight:500;display:block;font-size:15.5px;line-height:1.35}
+  .r-cat{display:block;font-size:13px;color:var(--ink-soft);margin-bottom:6px}
+  .r-why{font-size:13.5px;color:var(--ink-soft);margin:0 0 6px}
+  .r-how{font-size:13.5px;color:var(--ink-soft);margin:0 0 10px}
+  .r-how b{color:var(--ink);font-size:13.5px;display:inline}
+  .r-wa{font-size:13px;padding:8px 14px}
+  .skip-note{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:11px 14px;font-size:13.5px;color:var(--ink-soft);margin-bottom:12px}
+  .skip-note b{color:var(--ink);font-weight:500}
+
   /* ---------- Ritual ---------- */
   .ritual-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center}
   @media (max-width:900px){ .ritual-grid{grid-template-columns:1fr;gap:34px} }
